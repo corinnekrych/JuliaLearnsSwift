@@ -57,7 +57,9 @@ let gorillasWithE2 = jungle.elements.filter { $0.name.hasPrefix("A")}
 
 gorillasWithE2.map {println("Names: \($0.name)")}
 
-gorillasWithE2
+let toPrint = reduce(jungle.elements, "gorilla: ") { (display:String, gorilla: Gorilla) -> String in
+    return display + gorilla.name + " "
+}
 
-
+println(toPrint)
 

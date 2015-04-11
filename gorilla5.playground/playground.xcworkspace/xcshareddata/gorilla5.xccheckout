@@ -5,16 +5,16 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>60691170-67D7-4B0C-B8E8-3EADC16BA674</string>
+	<string>4ADBAA48-1DB1-4DE1-ACB0-B65CB131B91F</string>
 	<key>IDESourceControlProjectName</key>
-	<string>gorilla2 copy 5</string>
+	<string>gorilla5</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>5D1127B27412631EF05D136C9E8BEA51E080A8A7</key>
 		<string>https://github.com/corinnekrych/JuliaLearnsSwift.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>gorilla2 copy 5.playground</string>
+	<string>gorilla5.playground</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>5D1127B27412631EF05D136C9E8BEA51E080A8A7</key>
