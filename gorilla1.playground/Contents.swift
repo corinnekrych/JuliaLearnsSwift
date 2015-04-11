@@ -46,7 +46,7 @@ var emilie = Gorilla(name: "Emilie")
 var alice = emilie
 emilie.name = "Emily"
 alice.name = "Alice"
-println("Emile:\(emilie.name) and Alice \(alice.name)")
+println("Emilie:\(emilie.name) and Alice \(alice.name)")
 
 var banana = Banana()
 var rottenBanana = banana
@@ -59,34 +59,40 @@ println("Rotten Banana is peeled: \(rottenBanana.isPeeled)")
 //: 8. Array/Dictionary
 // initially [Gorilla]
 struct Jungle {
-    var elements: [JungleElement] = []
+    var elements: [Gorilla] = []
 }
-//: 9. Strongly type and Protocol
+
 var jungle = Jungle()
 jungle.elements = [emilie, alice]
-jungle.elements += [julia] as [JungleElement]
-jungle.elements += [banana] as [JungleElement]
+jungle.elements += [julia] //as [JungleElement]
+//jungle.elements += [banana] as [JungleElement]
 jungle.elements
 
-//: 10. map, filter, reduce
-let gorillas = jungle.elements.filter ({ (elt: JungleElement) -> Bool in
-    return elt is Gorilla
-})
-let gorillas2 = jungle.elements.filter { $0 is Gorilla}
-println("")
-
-(gorillas as! [Gorilla]).map({ (gorilla: Gorilla)-> () in
-    println("\(gorilla.name)")
+//: 9. map, filter, reduce
+let gorillasWithE = jungle.elements.filter ({ (elt: Gorilla) -> Bool in
+    return elt.name.hasPrefix("E")
 })
 
+let gorillasWithE2 = jungle.elements.filter { $0.name.hasPrefix("A")}
+
+gorillasWithE2.map {println("Names: \($0.name)")}
+//: 10. Strongly type and Protocol
 
 
-let gorillasOnly = gorillas as! [Gorilla]
-gorillasOnly
+//var gorillasOnly = gorillas as! [Gorilla]
+//
+//gorillasOnly.map({ (gorilla: Gorilla)-> () in
+//    println("one")
+//})
 
-gorillasOnly.map {(elt:Gorilla)->() in
-    println("Name: \(elt.name)")
-}
+
+//
+//let gorillasOnly = gorillas as! [Gorilla]
+//gorillasOnly
+//
+//gorillasOnly.map {(elt:Gorilla)->() in
+//    println("Name: \(elt.name)")
+//}
 
 //
 
