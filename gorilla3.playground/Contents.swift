@@ -3,9 +3,9 @@
 //: — Joe Armstrong
 
 //: 1. Define class
-class Gorilla {
+class Gorilla{
     var name: String
-    var banana: Optional<Banana> = nil
+    var banana: Banana? = nil
     init(name: String) {
         self.name = name
     }
@@ -17,9 +17,24 @@ struct Banana {
 }
 
 //: Define as let to start with
-let julia = Gorilla(name: "Julia")
+var julia = Gorilla(name: "Julia")
 //: 4. string interpolation
 println("Gorilla's name is \(julia.name)")
 
 //: 5. let/var
 julia = Gorilla(name: "Gulia")
+
+//: 6. Struct/Classes: pass by value or reference
+var emilie = Gorilla(name: "Emilie")
+var alice = emilie
+emilie.name = "Emily"
+alice.name = "Alice"
+println("Emilie:\(emilie.name) and Alice \(alice.name)")
+
+var banana = Banana()
+var rottenBanana = banana
+rottenBanana.isPeeled = true
+println("Banana is peeled: \(banana.isPeeled)")
+println("Rotten Banana is peeled: \(rottenBanana.isPeeled)")
+
+//: 7. what about using let for the instances?
