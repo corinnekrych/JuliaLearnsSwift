@@ -53,6 +53,6 @@ jungle.elements
 //: 10. Strongly type and Protocol
 import UIKit
 
-var juliaImage = UIImage(named: "Julia2")
+var juliaImage = UIImage(named: "Julia.jpg")
 
 
